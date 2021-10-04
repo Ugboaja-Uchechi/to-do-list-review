@@ -1,7 +1,7 @@
-export const allTasks = document.querySelector('.task-list');
+const allTasks = document.querySelector('.task-list');
 let todos = [];
 
-export function getTodos() {
+function getTodos() {
   if (localStorage.getItem('todos') === null) {
     todos = [];
   } else {
@@ -22,7 +22,7 @@ export function getTodos() {
 }
 getTodos();
 
-export function displayBox() {
+function displayBox() {
   const checkBoxes = document.querySelectorAll('.check-list');
   for (let i = 0; i < checkBoxes.length; i += 1) {
     checkBoxes[i].addEventListener('change', (e) => {

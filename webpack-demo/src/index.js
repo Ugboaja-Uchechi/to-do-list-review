@@ -1,13 +1,11 @@
 /* eslint-disable import/no-mutable-exports */
 /* eslint-disable import/prefer-default-export */
-import './style.css';
-import { getTodos } from './task.js';
 
 const inputText = document.querySelector('.add');
 const listTask = document.querySelector('.add-task');
 const clear = document.querySelector('.clear-all');
 const todos = JSON.parse(localStorage.getItem('todos')) || [];
-export let editIndex = null;
+let editIndex = null;
 
 function saveLocalTodos({ index, description, completed }) {
   todos.push({ index, description, completed });
