@@ -1,6 +1,4 @@
-import { getTodos } from './task.js';
-
-export default function displayBox() {
+function displayBox() {
   const checkBoxes = document.querySelectorAll('.check-list');
   for (let i = 0; i < checkBoxes.length; i += 1) {
     checkBoxes[i].addEventListener('change', (e) => {
